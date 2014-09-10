@@ -8,10 +8,12 @@
  * Controller of the ngFeedApp
  */
 angular.module('ngFeedApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', ['$scope', 'configuration', function ($scope, configuration) {
+        $scope.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
+
+        $scope.foo = configuration.foo;
+    }]);
