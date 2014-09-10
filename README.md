@@ -44,3 +44,5 @@ This project include Protractor (E2E testing), Environment Specific Configuratio
     > npm install karma-jasmine --save-dev
     > npm install karma-phantomjs-launcher --save-dev
     > ...
+
+test
