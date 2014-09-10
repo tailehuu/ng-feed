@@ -9,51 +9,33 @@ This project include Protractor (E2E testing), Environment Specific Configuratio
 
 #### Command:
 
-- Unit testing
+- Unit testing | E2E testing | Full testing
 
-    > grunt karma
+        > grunt karma | protractor | test
 
-- E2E testing
+- Running: Development (default) | Staging | Production
 
-    > grunt protractor
-
-- Full testing
-
-    > grunt test
-
-- Running
-
-  - Development (default)
-
-    > grunt serve
-
-  - Staging
-
-    > grunt staging
-
-  - Production
-
-    > grunt production
+        > grunt serve | staging | production
 
 #### How it created:
 
 1. Scaffolding
 
-    > mkdir ng-feed
-    > cd ng-feed
-    > yo angular
+        > mkdir ng-feed
+        > cd ng-feed
+        > yo angular
     
 2. Unit test
 
-    > npm install grunt-karma --save-dev
-    > npm install karma-jasmine --save-dev
+        > npm install grunt-karma --save-dev
+        > npm install karma-jasmine --save-dev
+        > npm install karma-phantomjs-launcher --save-dev
     
 3. Protractor
 
-    > npm install karma-phantomjs-launcher --save-dev
-<<<<<<< HEAD
+        > npm install protractor grunt-protractor-runner --save-dev
 
-Create protractor.conf.js file under test folder & add it contents:
+Create **protractor.conf.js** file under **/test** folder & add it contents:
 
     exports.config = {
         allScriptsTimeout: 11000,
@@ -77,7 +59,7 @@ Create protractor.conf.js file under test folder & add it contents:
         }
     };
     
-Update your Gruntfile.js, add the following after the karma task:
+Update your **Gruntfile.js**, add the following after the karma task:
 
     protractor: {
       options: {
@@ -87,7 +69,7 @@ Update your Gruntfile.js, add the following after the karma task:
       run: {}
     }    
 
-Add the protractor task under test, Gruntfile.js
+Add the protractor task under test, Gruntfile.js:
 
     grunt.registerTask('test', [
       'clean:server',
@@ -110,7 +92,7 @@ Add the protractor task under test, Gruntfile.js
     
 Modify Grunfile.js
 
-replace:
+add replace task:
 
     replace: {
                 development: {
@@ -156,7 +138,6 @@ modify serve task:
 
     grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
             ...
-    
             grunt.task.run([
                 ...
                 'replace:development',
@@ -168,7 +149,6 @@ add two new tasks:
 
     grunt.registerTask('staging', [
             'replace:staging',
-    
             // run other command
             'clean:server',
             'wiredep',
@@ -180,7 +160,6 @@ add two new tasks:
     
         grunt.registerTask('production', [
             'replace:production',
-    
             // run other command
             'clean:server',
             'wiredep',
@@ -190,12 +169,6 @@ add two new tasks:
             'watch'
         ]);
 
-
 Finish.
 
 :smile:
-=======
-    > ...
-
-test
->>>>>>> 44528a78ea57b7b6c896360488d48129517ad997
