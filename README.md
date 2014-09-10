@@ -51,6 +51,7 @@ This project include Protractor (E2E testing), Environment Specific Configuratio
 3. Protractor
 
     > npm install karma-phantomjs-launcher --save-dev
+<<<<<<< HEAD
 
 Create protractor.conf.js file under test folder & add it contents:
 
@@ -193,3 +194,8 @@ add two new tasks:
 Finish.
 
 :smile:
+=======
+    > ...
+
+test
+>>>>>>> 44528a78ea57b7b6c896360488d48129517ad997
