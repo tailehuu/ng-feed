@@ -4,23 +4,22 @@ This project include Protractor (E2E testing), Environment Specific Configuratio
 
 #### Installation:
 
-> npm install
-
-> ...
+    > npm install
+    > ...
 
 #### Command:
 
 - Unit testing
 
-> grunt karma
+    > grunt karma
 
 - E2E testing
 
-> grunt protractor
+    > grunt protractor
 
 - Full testing
 
-> grunt test
+    > grunt test
 
 - Running
 
@@ -38,16 +37,10 @@ This project include Protractor (E2E testing), Environment Specific Configuratio
 
 #### How it created:
 
-> mkdir ng-feed
-
-> cd ng-feed
-
-> yo angular
-
-> npm install grunt-karma --save-dev
-
-> npm install karma-jasmine --save-dev
-
-> npm install karma-phantomjs-launcher --save-dev
-
-> ...
+    > mkdir ng-feed
+    > cd ng-feed
+    > yo angular
+    > npm install grunt-karma --save-dev
+    > npm install karma-jasmine --save-dev
+    > npm install karma-phantomjs-launcher --save-dev
+    > ...
