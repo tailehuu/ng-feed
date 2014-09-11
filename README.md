@@ -2,6 +2,9 @@
 
 This project include Protractor (E2E testing), Environment Specific Configuration.
 
+#### Requirement:
+TBD
+
 #### Installation:
 
     > npm install
